@@ -5,7 +5,7 @@ import axios from "axios";
 
 const PayButton = ({ cartItem }) => {
   const user = useSelector((state) => state.auth);
-  //   console.log(user)
+    // console.log(cartItem)
   const handleClick = () => {
     // console.log(cartItem);
     axios
