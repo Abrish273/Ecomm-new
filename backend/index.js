@@ -15,7 +15,8 @@ app.use(cors());
 
 app.use("/api/register", register);
 app.use("/api/login", login);
-app.use("/api/stripe", require("./routes/stripe"));
+// app.use("/api/stripe", require("./routes/stripe"));
+app.use("/api/stripe", require("./routes/letsgoStripe"));
 
 app.get("/", (req, res) => {
   res.send("Welcome our to online shop API...");

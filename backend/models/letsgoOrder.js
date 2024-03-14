@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const orderSchema = new mongoose.Schema(
+const letsGoSchema = new mongoose.Schema(
   {
     userId: { type: String },
     // the current logged in user id
@@ -10,19 +10,16 @@ const orderSchema = new mongoose.Schema(
       {
         id: { type: String },
         name: { type: String },
-        brand: { type: String },
+        // brand: { type: String },
         desc: { type: String },
         price: { type: String },
-        image: { type: String },
+        // image: { type: String },
         cartQuantity: { type: Number },
       },
     ],
     subtotal: { type: Number, required: true },
     // total is with shpping and taxes
     // total: { type: Number, required: true },
-    // email: { type: String, required: true },
-    // name: { type: String, required: true },
-    // phone: { type: Number, required: true },
     // shipping: { type: Object, required: true },
     // delivery_status: { type: String, defult: "pending" },
     payment_status: { type: String, required: true },
@@ -36,7 +33,6 @@ const orderSchema = new mongoose.Schema(
 //   next();
 // });
 
+const LetsGoOrder = mongoose.model("Order", letsGoSchema);
 
-const Order = mongoose.model("Order", orderSchema);
-
-module.exports = Order;
+module.exports = LetsGoOrder;
